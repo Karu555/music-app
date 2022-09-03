@@ -2,7 +2,9 @@ const express = require("express");
 const mongoose= require("mongoose");
 const app =express();
 const http = require("http");
-const artistRoute = require("./Routes/artist")
+const artistRoute = require("./Routes/artist");
+const songRoute = require("./Routes/songs");
+const userRoute = require("./Routes/user")
 const bodyparser = require("body-parser");
 
 app.use(bodyparser.json());
@@ -15,6 +17,8 @@ mongoose.connect("mongodb+srv://karunesh:qwerty123456@cluster0.hb1isfh.mongodb.n
 })
 .then(console.log("connected")).catch(err=>console.log(err))
 app.use("/new",artistRoute);
+app.use("/api",songRoute)
+app.use("/user",userRoute)
 
 
 
