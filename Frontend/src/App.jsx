@@ -1,10 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import {Navbar} from "./Components/Navbar";
+import { TopSong } from "./Components/TopSong";
+import { Song } from "./Components/Song";
+import TopArtist from "./Components/TopArtist";
+import AddSong from "./Components/AddSong";
+import AddArtist from "./Components/AddArtist";
+import {Login} from "./Components/Login";
+import {Signup} from "./Components/Signup";
+
 
 function App() {
   return (
-    <div className="App">
-    hello
+    <div>
+      <Navbar />
+      <TopSong />
+      <Song />
+      <TopArtist />
+      <AddSong  />
+      <AddArtist />
+      <Login/>
+      <Signup/>
     </div>
   );
 }

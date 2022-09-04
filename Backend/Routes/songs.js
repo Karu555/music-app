@@ -6,11 +6,13 @@ const router= express.Router();
 
 router.post("/songs",async(req,res) =>{
     console.log(req.body)
+    
     const data = new Song({
         name:req.body.name,
         dateOfRelease:req.body.dateOfRelease,
         cover:req.body.cover,
         artist:req.body.artist
+        
     });
 try{ 
 

@@ -1,0 +1,66 @@
+.addsong{
+    border: 1px solid red;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.addsong1{
+    border: 1px solid red;
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 500px;
+}
+.addsongform{
+    margin-top: 1%;
+}
+label {
+    clear:left;
+    text-align:right;
+    padding-right:50px;
+    padding-bottom: 30px;
+}
+
+input, label {
+    float:left;
+}
+input{
+    text-align: left;
+}
+.songname{
+    padding-left: 70px;
+    padding-bottom: 10px;
+}
+.daterelease{
+    padding-left: 70px;
+    padding-bottom: 10px;
+    margin-left: -8px;
+}
+.file{
+    /* border: 1px solid red; */
+    padding-left: 27px;
+    padding-bottom: 10px;
+   
+}
+
+.artists{
+    padding-left: 70px;
+    padding-bottom: 10px;
+    margin-left:37px;
+}
+.addartist{
+    border: 1px solid red;
+    margin-top: 90px;
+    padding: 6px 10px;
+    margin-left: 30px;
+}
+.Cancel{
+    border: 1px solid red;
+    margin-top: 30px;
+    margin-left: -17%;
+    padding: 6px 15px;
+}
+.Save{
+    border: 1px solid red;
+    margin-top: 30px;
+    margin-left: 1%;
+    padding: 6px 20px;
+}

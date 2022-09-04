@@ -1,0 +1,43 @@
+.addArtist{
+    border: 1px solid red;
+    width: 70%;
+    height: 500px;
+    margin-left: 10%;
+}
+.form{
+ border: 1px solid red;
+ margin-left: 15%;
+}
+.aName{
+    height: 25px;
+    width: 250px;
+    margin-top: 50px;
+}
+input{
+    margin-left: 60px;
+}
+.date{
+    height: 25px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 53px;
+}
+.bio{
+    height: 100px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+.cancel{
+    width: 70px;
+    height: 30px;
+    margin-top: 100px;
+    margin-left: 700px;
+    margin-right: 20px;
+}
+.done{
+    width: 70px;
+    height: 30px;
+    background-color: #263238;
+    color: white;
+}

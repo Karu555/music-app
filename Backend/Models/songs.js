@@ -4,7 +4,8 @@ const songSchema= new mongoose.Schema({
     name:{type:String,required:true},
     dateOfRelease:{type:String,required:true},
     cover:{type:String,required:true},
-    artist:{type:mongoose.Schema.Types.ObjectId,ref:"Artist"}
+    artist:{type:mongoose.Schema.Types.ObjectId,ref:"Artist"},
+    rating:{type:Array}
 })
 
 
