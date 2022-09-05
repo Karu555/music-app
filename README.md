@@ -5,17 +5,17 @@ DeltaXAssignment
 ## Project Statement : 
 **Create a Spotify like website with basic CRUD and song listings.**
 **We would like to have the following entities in the application.**
-#### Artists
+**Artists
  - Name
  - DOB
  - Bio
-#### Songs
+Songs
  - Name
  - Date of Release
  - Cover (image)
-#### User
+User
  - Name
- - Email**
+ - Email
 
 
 ## Tech Stack used : 
@@ -26,7 +26,7 @@ DeltaXAssignment
 
 ### Backend
 - Node.js
-- Express.js
+-Express.js
 
 ### Database
 - MongoDB
@@ -35,18 +35,27 @@ DeltaXAssignment
 - **Github repo link :  https://github.com/Karu555/music-app**
 - **Deployment link :  https://deltaxassignmentkarunesh.netlify.app/**
 
-<!-- ### Screenshots :
+### Screenshots :
 
-- **Landing Page :** 
+- **Home Page :** 
 
-(❮img src="imag/weather1.png" width="100" ❯)
-![weatherpic.png](weather1.png)
+
+![Screenshot (14)](https://user-images.githubusercontent.com/73343061/188501757-580b3450-03fb-439d-a78f-4979836994c1.png)
  
-![weatherpic2.png](file:///C:/Users/DELL/Pictures/Screenshots/weatherpic2.png)
+![Screenshot (15)](https://user-images.githubusercontent.com/73343061/188501840-e7b5d281-7809-4c04-a670-ed081d47da0d.png)
 
-![weatherpic3.png](file:///C:/Users/DELL/Pictures/Screenshots/weatherpic3.png)
+- **AddSong Page :**
 
-![weatherpic4.png](file:///C:/Users/DELL/Pictures/Screenshots/weatherpic4.png) -->
+
+
+![Screenshot (16)](https://user-images.githubusercontent.com/73343061/188501955-546cb469-63bd-4f15-8229-05cfe19feedc.png)
+
+
+- **AddArtist Page :**
+ 
+
+
+![Screenshot (18)](https://user-images.githubusercontent.com/73343061/188502181-5bb4ae50-6885-4f96-963d-f8d852dec062.png)
 
 
 ## LinkedIn ##
