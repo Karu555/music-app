@@ -35,7 +35,7 @@ User
 
 ## Useful Links :
 - **Github repo link :  https://github.com/Karu555/music-app**
-- **Deployment link :  deltaxassignmentkarunesh.netlify.app**
+- **Deployment link :  https://deltaxassignmentkarunesh.netlify.app/**
 
 <!-- ### Screenshots :
 
