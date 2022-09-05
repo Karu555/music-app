@@ -3,9 +3,9 @@ DeltaXAssignment
 
 
 ## Project Statement : 
-**Create a Spotify like website with basic CRUD and song listings.
-We would like to have the following entities in the application.
-Artists
+**Create a Spotify like website with basic CRUD and song listings.**
+**We would like to have the following entities in the application.**
+**Artists
  - Name
  - DOB
  - Bio
@@ -15,10 +15,8 @@ Songs
  - Cover (image)
 User
  - Name
- - Email
+ - Email**
 
-
-** 
 
 ## Tech Stack used : 
 ### Frontend
