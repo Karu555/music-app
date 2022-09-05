@@ -26,7 +26,7 @@ export const Signup = () => {
    console.log(data);
     axios({
       method: "POST",
-      url: "http://localhost:8080/user/register",
+      url: "https://deltaxapi.herokuapp.com/user/register",
       data: data,
     })
       .then((response) => {

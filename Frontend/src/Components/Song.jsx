@@ -13,7 +13,7 @@ export const Song = () => {
     
        axios({
          method: "GET",
-         url: "http://localhost:8080/api/songs",
+         url: "https://deltaxapi.herokuapp.com/api/songs",
        })
          .then((response) => {
          

@@ -26,7 +26,7 @@ export const Login = () => {
     console.log(data);
     axios({
       method: "POST",
-      url: "http://localhost:8080/user/login",
+      url: "https://deltaxapi.herokuapp.com/user/login",
       data: data,
     })
       .then((response) => {

@@ -22,7 +22,7 @@ function submitChange(e) {
   console.log(data);
   axios({
     method: "POST",
-    url: "http://localhost:8080/api/songs",
+    url: "https://deltaxapi.herokuapp.com/api/songs",
     data: data,
   })
     .then((response) => {

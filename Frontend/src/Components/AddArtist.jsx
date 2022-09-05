@@ -16,7 +16,7 @@ const AddArtist = () => {
     console.log(data);
     axios({
       method: "POST",
-      url: "http://localhost:8080/new/artist",
+      url: "https://deltaxapi.herokuapp.com/new/artist",
       data: data,
     })
       .then((response) => {

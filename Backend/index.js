@@ -7,6 +7,7 @@ const songRoute = require("./Routes/songs");
 const userRoute = require("./Routes/user")
 const bodyparser = require("body-parser");
 const cors = require("cors");
+const port=process.env.PORT || 8080;
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:false}));
@@ -26,6 +27,6 @@ app.use("/user",userRoute)
 
 const server =http.createServer(app);
 
-server.listen(8080 ,
+server.listen(port ,
     console.log("listening on 8080")
 )
