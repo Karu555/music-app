@@ -5,15 +5,16 @@ DeltaXAssignment
 ## Project Statement : 
 **Create a Spotify like website with basic CRUD and song listings.**
 **We would like to have the following entities in the application.**
-**Artists
+**
+####Artists
  - Name
  - DOB
  - Bio
-Songs
+####Songs
  - Name
  - Date of Release
  - Cover (image)
-User
+###User
  - Name
  - Email**
 
@@ -26,7 +27,7 @@ User
 
 ### Backend
 - Node.js
--Express.js
+- Express.js
 
 ### Database
 - MongoDB
