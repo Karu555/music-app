@@ -5,7 +5,7 @@ const songSchema= new mongoose.Schema({
     dateOfRelease:{type:String,required:true},
     cover:{type:String,required:true},
     artist:{type:mongoose.Schema.Types.ObjectId,ref:"Artist"},
-    rating:{type:Array}
+    rating:{type:Number,default:1}
 })
 
 

@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
+import './Login.css'
 
 export const Login = () => {
+  const navigate=useNavigate()
   const [data, setData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
+  function submitDetails(){
+    navigate("/register")
+  }
 
   function handleChange(event) {
     let value = event.target.value;
@@ -17,13 +23,18 @@ export const Login = () => {
   }
 
   function submitChange() {
+    console.log(data);
     axios({
       method: "POST",
-      url: "https://masai-api-mocker.herokuapp.com/auth/register",
+      url: "http://localhost:8080/user/login",
       data: data,
     })
       .then((response) => {
-        console.log(response.data);
+        
+        const token=response.data.accessToken;
+        
+       localStorage.setItem("tokn",JSON.stringify(token));
+       navigate("/")
       })
       .catch((error) => {
         console.log(error);
@@ -31,23 +42,29 @@ export const Login = () => {
   }
   console.log(data);
   return (
-    <div>
-      <h1>Login</h1>
-      <input
+    <div className="login">
+      <h1 className="h1">Login</h1>
+      <label>Email</label>
+      <input 
+        className="email2"
         type="text"
-        name="username"
-        value={data.username}
+        name="email"
+        value={data.email}
         onChange={handleChange}
         placeholder="Enter User Name"
-      />
+      /> <br />
+      <label>Password</label>
       <input
+         className="password2"
         type="password"
         name="password"
         value={data.password}
         onChange={handleChange}
         placeholder="Enter Password"
-      />
-      <button onClick={submitChange}>Submit</button>
+      /> <br />
+      <button className="button12" onClick={submitChange}>Submit</button>
+      <p className="loginp1">If you are new Signup first</p>
+      <button className="signup" onClick={submitDetails}>Signup</button>
     </div>
   );
 };

@@ -12,13 +12,17 @@
     padding-left: 10px;
     background-color: white;
     border: none;
-}
+} 
 .input{
-     margin-left: 800px;
+     margin-left: 1000px;
      border: 1px solid red;
-     margin-top: 30px;
+     margin-top: 25px;
      height: 20px;
      border: none;
+     width: 14.5%;
+     border-radius: 20px;
+     padding: 5px 20px;
+     
 }
 /* --------------------------TOPSONG------------------------------------------------ */
 
@@ -26,9 +30,11 @@
     /* border: 1px solid red; */
     display: flex;
     margin-top: 10px;
+    margin-bottom: 2px;
 }
 .top{
     margin-left: 5%;
+    color: #546E7A;
 }
 .add{
      /* border: 1px solid red;  */
@@ -89,9 +95,14 @@
     /* text-align: center; */
  }
  .main1{
+   /* border: 1px solid red; */
     border: 1px solid #546E7A;
     text-align: center;
     
+ }
+ .main1p{
+   /* border: 1px solid red; */
+   margin-top: 30%;
  }
  img{
     height: 150px;
@@ -109,6 +120,7 @@
  }
  .artist10{
     padding-left: 5%;
+    color: #546E7A;
  }
 .top10artist{
     /* border: 1px solid red; */
@@ -123,7 +135,7 @@
 .p1{
     border: 1px solid #546E7A;
     text-align: center;
-margin-top: 1px;
+   margin-top: 1px;
     height: 28px;
 }
 .top10artistrow{
@@ -133,5 +145,23 @@ margin-top: 1px;
     grid-template-columns: 20% 20% 60%;
     margin-left: 4%;
     margin-right: 4%;
-    margin-top: 40px;
+   
+    /* margin-top: 40px; */
+}
+.top10artistrow1{
+   border: 1px solid #546E7A;
+   padding-top: 15%;
+   padding-bottom: 15%;
+   text-align: center;
+   margin-top: 0%;
+}
+.top10artistrow12{
+   border: 1px solid #546E7A;
+   padding-top: 5%;
+   padding-bottom: 5%;
+   text-align: center;
+   margin-top: 0%;
+}
+span{
+   margin-right: 10px;
 }

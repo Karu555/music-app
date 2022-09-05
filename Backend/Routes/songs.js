@@ -11,8 +11,8 @@ router.post("/songs",async(req,res) =>{
         name:req.body.name,
         dateOfRelease:req.body.dateOfRelease,
         cover:req.body.cover,
-        artist:req.body.artist
-        
+        artist:req.body.artist,
+        rating:req.body.rating
     });
 try{ 
 
@@ -32,6 +32,18 @@ router.get("/songs" , async(req,res) =>{
     try{
         const songs=await Song.find().populate("artist")
         res.status(200).json(songs)
+    }
+    catch(err){
+        res.status(404).json(err);
+    }
+    
+})
+
+router.put("/:id" , async (req,res) =>{
+    const id =req.params.id;
+    try{
+       const song = await Song.findByIdAndUpdate({_id:id},{$set:{rating:req.body.rating}})
+        res.status(201).json("success")
     }
     catch(err){
         res.status(404).json(err);

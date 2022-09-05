@@ -1,7 +1,30 @@
-import React from 'react'
-import './Style.css'
+import React from 'react';
+import { useEffect } from 'react';
+import './Style.css';
+import axios from "axios"
+import { useState } from 'react';
+
 
 export const Song = () => {
+  const [data,setData ] =useState([])
+ 
+  useEffect(()=>{
+    
+    
+       axios({
+         method: "GET",
+         url: "http://localhost:8080/api/songs",
+       })
+         .then((response) => {
+         
+         setData(response.data)
+         })
+         .catch((error) => {
+           console.log(error);
+         });
+       
+    
+  },[])
   return (
     <div className='songdiv'>
         <div className='title'>
@@ -11,20 +34,15 @@ export const Song = () => {
             <div className='title1'><p className='p'>Artists</p></div>
             <div className='title1'><p className='p'>Rate</p></div>
         </div>
-        <div className='main'>
-            <div className='main1'><img src="https://yt3.ggpht.com/ytc/AMLnZu-0IsaFrJsFdnbeeLMx2x2ziGsa-RAy5QUnWPsh=s900-c-k-c0x00ffffff-no-rj" alt="" /></div>
-            <div className='main1'>SOmeone you loved</div>
-            <div className='main1'>July 21, 2019</div>
-            <div className='main1'>Lewis Capali</div>
-            <div className='main1'></div>
-        </div>
-        <div className='main'>
-            <div className='main1'><img src="https://yt3.ggpht.com/ytc/AMLnZu-0IsaFrJsFdnbeeLMx2x2ziGsa-RAy5QUnWPsh=s900-c-k-c0x00ffffff-no-rj" alt="" /></div>
-            <div className='main1'>SOmeone you loved</div>
-            <div className='main1'>July 21, 2019</div>
-            <div className='main1'>Lewis Capali</div>
-            <div className='main1'></div>
-        </div>
+        {data.map((i) =>( <div className='main'>
+            <div className='main1'><img src={i.cover} alt="" /></div>
+            <div className='main1'><p className='main1p'>{i.name}</p></div>
+            <div className='main1'><p className='main1p'>{i.dateOfRelease}</p></div>
+            <div className='main1'><p className='main1p'>{i.artist.name}</p></div>
+            <div className='main1'><p className='main1p'>{i.rating}</p></div>
+        </div>))}
+       
+        
     </div>
   )
 }

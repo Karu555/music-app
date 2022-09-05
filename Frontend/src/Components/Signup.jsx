@@ -1,26 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-// import { useSelector, useDispatch } from "react-redux";
 import { Navigate, useNavigate } from "react-router";
-// import {
-//   fetchStateFailure,
-//   fetchStateSuccess,
-//   fetchStateRequest,
-// } from "../Redux/State/action";
+import "./Signup.css"
 
 export const Signup = () => {
   const [data, setData] = useState({
-    name: "",
-    email: "",
-    password: "",
     username: "",
-    mobile: "",
-    description: "",
+    password: "",
+    email: "",
   });
+  // console.log(data)
 
-  const navigate = useNavigate;
 
-  // const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   function handleChange(event) {
     let value = event.target.value;
     setData({
@@ -28,43 +21,40 @@ export const Signup = () => {
       [event.target.name]: value,
     });
   }
-  // console.log(data);
-  // const state = useSelector((store) => store.state.state);
-  // console.log("state", state);
 
   function submitChange() {
-    // const req = fetchStateRequest;
-    dispatch(req);
+   console.log(data);
     axios({
       method: "POST",
-      url: "https://masai-api-mocker.herokuapp.com/auth/register",
+      url: "http://localhost:8080/user/register",
       data: data,
     })
       .then((response) => {
-        // dispatch(fetchStateSuccess(response.data));
-        console.log(response.data);
+      
+        navigate("/login")
       })
       .catch((error) => {
-        // dispatch(fetchStateFailure(error));
+        console.log(error);
       });
-    if ((state.error = false)) {
-      alert("Success");
-      navigate("/login");
-    }
+    
   }
 
   return (
-    <div>
+    <div className="register">
       <h1>Sign up</h1>
+      <label>Username</label>
       <input
+      className="username1"
         type="text"
-        name="name"
-        value={data.name}
+        name="username"
+        value={data.username}
         onChange={handleChange}
-        placeholder="Enter Your name"
+        placeholder="Enter Username"
       />
-      <br />
+     <br />
+     <label>Email</label>
       <input
+      className="email1"
         type="text"
         name="email"
         value={data.email}
@@ -72,7 +62,9 @@ export const Signup = () => {
         placeholder="Enter Email"
       />
       <br />
+      <label>Password</label>
       <input
+      className="password1"
         type="password"
         name="password"
         value={data.password}
@@ -80,31 +72,8 @@ export const Signup = () => {
         placeholder="Enter Password"
       />
       <br />
-      <input
-        type="text"
-        name="username"
-        value={data.username}
-        onChange={handleChange}
-        placeholder="Enter Username"
-      />
-      <br />
-      <input
-        type="Number"
-        name="mobile"
-        value={data.mobile}
-        onChange={handleChange}
-        placeholder="enter Mobile Number"
-      />
-      <br />
-      <input
-        type="text"
-        name="description"
-        value={data.description}
-        onChange={handleChange}
-        placeholder="Enter Description"
-      />
-      <br />
-      <button onClick={submitChange}>Submit</button>
+     
+      <button className="button15" onClick={submitChange}>Submit</button>
     </div>
   );
 };

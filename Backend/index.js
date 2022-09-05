@@ -6,9 +6,11 @@ const artistRoute = require("./Routes/artist");
 const songRoute = require("./Routes/songs");
 const userRoute = require("./Routes/user")
 const bodyparser = require("body-parser");
+const cors = require("cors");
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:false}));
+app.use(cors());
 
 
 mongoose.connect("mongodb+srv://karunesh:qwerty123456@cluster0.hb1isfh.mongodb.net/?retryWrites=true&w=majority",{

@@ -6,7 +6,7 @@ const router= express.Router();
 
 
 router.post("/artist",async(req,res) =>{
-    console.log(req.body)
+    
     const data = new Artist({
         name:req.body.name,
         dob:req.body.dob,

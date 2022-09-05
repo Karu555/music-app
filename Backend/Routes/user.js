@@ -10,7 +10,7 @@ router.post("/register", async (req, res) => {
     email: req.body.email,
     password: CryptoJS.AES.encrypt(
       req.body.password,
-      process.env.SECRET_KEY
+      "secret password"
     ).toString(),
   });
   try {
@@ -26,7 +26,7 @@ router.post("/register", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   // console.log("hello");
-  // console.log(req.body.password, req.body.email);
+  console.log(req.body.password, req.body.email);
   try {
     const user = await User.findOne({ email: req.body.email });
 
@@ -36,7 +36,7 @@ router.post("/login", async (req, res) => {
     }
     // console.log("isUser");
 
-    const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET_KEY);
+    const bytes = CryptoJS.AES.decrypt(user.password, "secret password");
     const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
     console.log("originalPassword", originalPassword);
     if (originalPassword !== req.body.password) {
@@ -46,8 +46,8 @@ router.post("/login", async (req, res) => {
     console.log("correct pass");
 
     const accessToken = jwt.sign(
-      { id: user.id, isAdmin: user.isAdmin },
-      process.env.SECRET_KEY,
+      { id: user.id },
+     "secret password",
       { expiresIn: "5d" }
     );
 

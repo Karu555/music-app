@@ -6,19 +6,18 @@ import AddSong from "./Components/AddSong";
 import AddArtist from "./Components/AddArtist";
 import {Login} from "./Components/Login";
 import {Signup} from "./Components/Signup";
+import {AllRoutes} from "./routes/AllRoutes"
 
 
 function App() {
   return (
     <div>
       <Navbar />
-      <TopSong />
-      <Song />
-      <TopArtist />
-      <AddSong  />
-      <AddArtist />
-      <Login/>
-      <Signup/>
+     <AllRoutes/>
+     {/* <Signup/>
+     <Login/> */}
+
+     
     </div>
   );
 }
